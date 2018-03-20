@@ -76,15 +76,18 @@
 }
 .menu {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+     align-items: center;
 }
 
 .nav_menu {
     display: flex;
+    width: 600px;
     align-items: center;
     justify-content: space-around;
     color: #ffffff;
 }
+
 .order {
         display: flex;
         align-items: center;
@@ -100,9 +103,6 @@
     height: 10px;
 }
 
-.nav_menu {
-    display: flex;
-}
 .content {
     display: flex;
     width: auto;
