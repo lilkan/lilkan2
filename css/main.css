@@ -102,4 +102,34 @@ ul {
   min-width: 940px;
   min-height: 650px; }
 
+.order-link {
+  min-width: 6.125rem;
+  padding: 10px 17px;
+  border-radius: 5px;
+  background-color: #e25028;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500px;
+  line-height: 1.42;
+  text-transform: uppercase;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+
+.best {
+  background-image: url("../img_first/Rectangle1.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 /*# sourceMappingURL=main.css.map */
