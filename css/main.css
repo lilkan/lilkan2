@@ -116,6 +116,8 @@ ul {
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s; }
+  .order-link:hover {
+    background-color: #bd3d1a; }
 
 .hero {
   background-image: url("/img_first/Rectangle.png");
