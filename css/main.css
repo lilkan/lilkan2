@@ -261,7 +261,73 @@ ul {
 
 .hero__titles-first--best {
   color: #2f3234;
-  padding: 0;
+  padding-bottom: 100px;
   margin-bottom: 3.75rem; }
+
+.best__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: top;
+  -ms-flex-pack: top;
+  justify-content: top;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.best__content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: top;
+  -ms-flex-align: top;
+  align-items: top; }
+
+.best__feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: top;
+  -ms-flex-pack: top;
+  justify-content: top; }
+
+.best__img {
+  padding-bottom: 40px; }
+
+.best__caption {
+  font-family: 'Lifehack';
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  padding-bottom: 15px;
+  line-height: 1; }
+
+.best__description {
+  font-family: 'Ubuntu';
+  text-align: center;
+  color: #2f3234;
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 1.75; }
 
 /*# sourceMappingURL=main.css.map */
