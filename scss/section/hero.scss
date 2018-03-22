@@ -55,3 +55,47 @@
         text-decoration: underline;
     }
 }
+
+.hero__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    padding-bottom: 15%;
+}
+
+.hero__burger-img, .hero__titles {
+    flex-basis: 50%;
+    display: flex;
+}
+
+.hero__titles {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__titles-first {
+    color: $yellow;
+    font-family: 'Gagalin';
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1.42;
+    margin: 0;
+    padding-top: 60px;
+}
+.hero__titles-second {
+    color: white;
+    font-family: 'Lifehack';
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 1;
+}
