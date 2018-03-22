@@ -8,3 +8,10 @@
 @function rem($px) {
     @return $px / 16px+0rem;
 }
+
+@mixin bgimg ($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
