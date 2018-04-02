@@ -71,9 +71,10 @@ ul {
 
 .wrapper {
   width: 100%;
+  min-width: 960px;
   height: 100%;
   position: relative;
-  min-height: 0; }
+  min-height: 100%; }
 
 .maincontent {
   height: 100%;
@@ -175,9 +176,9 @@ ul {
   text-decoration: none;
   display: inline-block;
   vertical-align: middle;
-  -webkit-transition: 10s;
-  -o-transition: 10s;
-  transition: 10s; }
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
   .nav__link:hover {
     text-decoration: underline; }
 
