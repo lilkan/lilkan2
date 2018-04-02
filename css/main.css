@@ -71,10 +71,10 @@ ul {
 
 .wrapper {
   width: 100%;
-  min-width: 960px;
+  min-width: 940px;
   height: 100%;
   position: relative;
-  min-height: 100%; }
+  min-height: 0; }
 
 .maincontent {
   height: 100%;
