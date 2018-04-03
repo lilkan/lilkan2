@@ -1,5 +1,5 @@
 .feedback {
-    background-color: #fff;
+    background-color: white;
     display: flex;
     background-position: center bottom;
     justify-content: center;
@@ -7,9 +7,8 @@
 }
 
 .feedback__container {
-    background-color: #fff;
     height: 100%;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     justify-content: top;
     align-items: center;

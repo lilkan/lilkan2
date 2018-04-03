@@ -1,9 +1,10 @@
 .wrapper {
     width: 100%;
-    min-width: 940px;
+    min-width: 940px + 20px;
+    // 
     height: 100%;
-    position: relative;
-    min-height: 0;
+    position: relative;    
+    // overflow: hidden;
 }
 
 .maincontent {
@@ -12,7 +13,9 @@
 }
 
 .container {
-    width: 940px;
+    max-width: 940px;
+    width: 95%;
+    position: relative;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -21,7 +24,7 @@
 }
 
 .section {
-    height: 100%;
+    height: 100vh;
     background-color: $dark;
     min-width: 940px;
     min-height: 650px;
@@ -43,4 +46,9 @@
     &:hover {
         background-color: darken($orange, 10%);
     }
+}
+
+footer {
+    position: relative;
+    widows: 100%;
 }

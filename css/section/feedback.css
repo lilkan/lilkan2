@@ -1,5 +1,5 @@
 .feedback {
-  background-color: #fff;
+  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,7 +12,7 @@
   align-items: center; }
 
 .feedback__container {
-  background-color: #fff;
+  background-color: black;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,6 +29,7 @@
   align-items: center; }
 
 .feedback__content {
+  background-color: black;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
