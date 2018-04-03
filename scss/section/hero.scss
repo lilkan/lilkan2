@@ -59,6 +59,7 @@
 .hero__container {
     height: 100%;
     display: flex;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -75,7 +76,7 @@
 
 .hero__burger-img, .hero__titles {
     flex-basis: 50%;
-    display: flex;
+    display: block;
 }
 
 .hero__titles {
