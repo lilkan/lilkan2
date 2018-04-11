@@ -22,11 +22,34 @@
  .feedback__profile {    
     width: 25%;
     height: 50%;
-    display: flex;
-    flex-direction: column;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    position: relative;
+    
+
+    &:hover {
+        .feedback__spoiler {
+            opacity: 1;
+        }
+    }
 }
 
-.feedback__post {
-        text-align: center;
+.feedback__spoiler {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    padding-left: 20px;
+    background: rgba(#454545, .7);
+    color: white;
+    opacity: 0;
+    transition: 1s;
+}
+
+.feedback__name {
+       font-family: 'Gagalin';
 }
 
