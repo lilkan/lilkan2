@@ -17,10 +17,16 @@
     
 }
 
+.team-acco__item {
+    padding-bottom: 30px;
+}
+
 .team-acco__trigger {
     color: white; 
     display: flex;
-
+    padding-bottom: 20px;
+    font-family: 'Gagalin';
+    
     &:before {
         content: "";
         height: 0;
@@ -30,11 +36,41 @@
         border-bottom-width: 0;
     }
 }
+.team-acco__pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
+}
 
 .team-acco__content {
     display: flex;
-    
-}
+    display: none;
+    }
+
+
 .team-acco__text {
     color: white;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 25px;
+    font-size: medium;
+}
+
+.team-acco__item_active {
+    .team-acco__trigger {
+        color: $yellow;
+        &:before {
+            transform: rotate(-180deg)
+        }
+    }
+    .team-acco__content {
+        display: flex;
+    }
 }
