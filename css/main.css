@@ -406,7 +406,6 @@ footer {
   right: 0;
   width: 50%;
   background: rgba(47, 50, 52, 0.93);
-  padding-left: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,7 +415,8 @@ footer {
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  padding-left: 70px; }
 
 .team-acco__trigger {
   color: white;
@@ -435,5 +435,8 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.team-acco__text {
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */

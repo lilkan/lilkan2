@@ -10,14 +10,15 @@
     right: 0;
     width: 50%;
     background: rgba(#2f3234, .93);
-    padding-left: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 70px;
+    
 }
 
 .team-acco__trigger {
-    color: white;
+    color: white; 
     display: flex;
 
     &:before {
@@ -33,4 +34,7 @@
 .team-acco__content {
     display: flex;
     
+}
+.team-acco__text {
+    color: white;
 }
