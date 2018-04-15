@@ -1,0 +1,30 @@
+.order {
+    @include bgimg ('/img_first/order.jpg');
+}
+
+.form__block-title {
+    color: white;
+}
+
+.form__content {
+    width: 50%;
+}
+
+.form__input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+}
+.form__row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.form__block {
+    flex: 1;
+    margin-right: 20px;
+    &:last-child {
+        margin: 0;
+    }
+}
