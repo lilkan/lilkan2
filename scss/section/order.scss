@@ -2,12 +2,20 @@
     @include bgimg ('/img_first/order.jpg');
 }
 
-.form__block-title {
+.form {
     color: white;
+}
+
+.form__elem-block {
+    display: flex;
 }
 
 .form__content {
     width: 50%;
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .form__input {
@@ -15,6 +23,15 @@
     border-radius: 5px;
     padding: 5px;
     width: 100%;
+    height: 35px;
+
+    &-comment {
+        height: 109px;
+        border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    }
 }
 .form__row {
     display: flex;

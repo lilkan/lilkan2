@@ -501,17 +501,32 @@ footer {
   background-position: center bottom;
   background-size: cover; }
 
-.form__block-title {
+.form {
   color: white; }
 
+.form__elem-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .form__content {
-  width: 50%; }
+  width: 50%;
+  margin-right: 20px; }
+  .form__content:last-child {
+    margin-right: 0; }
 
 .form__input {
   border: none;
   border-radius: 5px;
   padding: 5px;
-  width: 100%; }
+  width: 100%;
+  height: 35px; }
+  .form__input-comment {
+    height: 109px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%; }
 
 .form__row {
   display: -webkit-box;
