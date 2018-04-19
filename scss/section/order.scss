@@ -28,9 +28,9 @@
     &-comment {
         height: 109px;
         border: none;
-    border-radius: 5px;
-    padding: 5px;
-    width: 100%;
+        border-radius: 5px;
+        padding: 5px;
+        width: 100%;
     }
 }
 .form__row {
@@ -45,3 +45,65 @@
         margin: 0;
     }
 }
+
+.form__checkbox {
+    display: flex;
+}
+
+.form__checkbox {
+    flex: 1;
+    margin-right: 20px;
+    align-items: center;
+    &:last-child {
+        margin: 0;
+    }
+    &-btn {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+    }
+}
+
+.form__comment-title {
+    position: relative;
+    padding: 0 0 0 30px;
+    cursor: pointer;
+    &--checkbox {
+        position: relative;
+        padding: 0 0 0 30px;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 1px;
+        //   @include circle (15px, white);
+            width: 15px;
+            height: 15px;
+            background: white;
+            transition: .2s;
+          }
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 1px;
+      @include circle (15px, white);
+        background: white;
+        transition: .2s;
+      }
+  }
+
+  .form__checkbox input:checked + .form__comment-title:before {
+    content: "\2022";
+    color: $orange;
+    font-size: 30px;
+    text-align: center;
+    line-height: 15px;
+  }
+
+  .form__checkbox input:checked + .form__comment-title--checkbox:before {
+    @include bgimg ('/img_first/check.png');
+  }
