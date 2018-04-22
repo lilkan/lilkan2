@@ -502,7 +502,11 @@ footer {
   background-size: cover; }
 
 .form {
-  color: white; }
+  color: white;
+  margin-top: 56px; }
+
+.fof {
+  margin-top: 140px; }
 
 .form__elem-block {
   display: -webkit-box;
@@ -608,5 +612,11 @@ footer {
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover; }
+
+.clean {
+  padding-left: 20px;
+  color: white;
+  border: none;
+  background: transparent; }
 
 /*# sourceMappingURL=main.css.map */

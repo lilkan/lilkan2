@@ -4,6 +4,11 @@
 
 .form {
     color: white;
+    margin-top: 56px;
+}
+
+.fof {
+    margin-top: 140px;
 }
 
 .form__elem-block {
@@ -106,4 +111,11 @@
 
   .form__checkbox input:checked + .form__comment-title--checkbox:before {
     @include bgimg ('/img_first/check.png');
+  }
+
+  .clean {
+      padding-left: 20px;
+      color: white;
+      border: none;
+      background: transparent;
   }
