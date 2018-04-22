@@ -1,0 +1,30 @@
+.map {
+    @include bgimg ('/img_first/map-marker.jpg');
+    width: 100%;
+    color: white;
+    position: relative;
+}
+
+.map__container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.footer {
+    @include bgimg ('/img_first/footerbg.jpg');
+    height: 58px;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom:0;
+    justify-content: space-around;
+    flex: 1;
+}
