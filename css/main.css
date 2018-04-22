@@ -90,6 +90,7 @@ p {
 .container {
   max-width: 940px;
   width: 95%;
+  height: 100%;
   position: relative;
   margin: 0 auto;
   display: -webkit-box;
@@ -504,9 +505,6 @@ footer {
 .form {
   color: white;
   margin-top: 56px; }
-
-.fof {
-  margin-top: 140px; }
 
 .form__elem-block {
   display: -webkit-box;
