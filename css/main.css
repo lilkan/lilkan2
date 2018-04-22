@@ -676,6 +676,13 @@ footer {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
+.footer__links {
+  -webkit-filter: brightness(0.4);
+  filter: brightness(0.4); }
+  .footer__links:hover {
+    -webkit-filter: brightness(1);
+    filter: brightness(1); }
+
 .footer__links-img {
   height: 20px;
   width: 20px; }
