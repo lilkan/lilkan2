@@ -687,4 +687,16 @@ footer {
   height: 20px;
   width: 20px; }
 
+.footer__contacts-phone {
+  color: #e25028;
+  font-weight: 600; }
+  .footer__contacts-phone:before {
+    content: url("/img_first/phone.png"); }
+
+.menu {
+  background-image: url("/img_first/menu1.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover; }
+
 /*# sourceMappingURL=main.css.map */

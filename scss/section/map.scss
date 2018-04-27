@@ -48,3 +48,11 @@
     width: 20px;
 
 }
+
+.footer__contacts-phone {
+    color: $orange;
+    font-weight: 600;
+    &:before {
+        content: url('/img_first/phone.png');
+    }
+}
