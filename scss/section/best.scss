@@ -38,15 +38,15 @@
 }
 
 .best__img {
-    padding-bottom: 40px;
+    padding-bottom: rem(40px);
 }
 
 .best__caption {
     font-family: 'Lifehack';
     text-align: center;
-    font-size: 24px;
+    font-size: rem(24px);
     font-weight: 400;
-    padding-bottom: 15px;
+    padding-bottom: rem(15px);
     line-height: 1;
 }
 
@@ -54,7 +54,7 @@
     font-family: 'Ubuntu';
     text-align: center;
     color: #2f3234;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: lighter;
     line-height: 1.75;
 

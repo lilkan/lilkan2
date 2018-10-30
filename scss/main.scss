@@ -4,11 +4,12 @@
 @import "config/variables";
 
 // base
-
+@import "layout/media";
 @import "layout/fonts";
 @import "layout/base";
 @import "layout/adjustment";
 
+  
 // section
 
 @import "section/hero";

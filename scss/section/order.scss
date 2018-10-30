@@ -4,45 +4,51 @@
 
 .form {
     color: white;
-    margin-top: 56px;
+    margin-top: rem(56px);
 }
 
 
 .form__elem-block {
     display: flex;
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .form__content {
     width: 50%;
-    margin-right: 20px;
+    margin-right: rem(20px);
     &:last-child {
         margin-right: 0;
+    }
+    @include tablets {
+        width: rem(470px);
     }
 }
 
 .form__input {
     border: none;
-    border-radius: 5px;
-    padding: 5px;
+    border-radius: rem(5px);
+    padding: rem(5px);
     width: 100%;
-    height: 35px;
+    height: rem(35px);
 
     &-comment {
-        height: 109px;
+        height: rem(109px);
         border: none;
-        border-radius: 5px;
-        padding: 5px;
+        border-radius: rem(5px);
+        padding: rem(5px);
         width: 100%;
     }
 }
 .form__row {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 }
 
 .form__block {
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
     &:last-child {
         margin: 0;
     }
@@ -54,7 +60,7 @@
 
 .form__checkbox {
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
     align-items: center;
     &:last-child {
         margin: 0;
@@ -63,26 +69,26 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
-    margin: 10px 0 0 20px;
+    margin: rem(10px) 0 0 rem(20px);
     }
 }
 
 .form__comment-title {
     position: relative;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 rem(30px);
     cursor: pointer;
     &--checkbox {
         position: relative;
-        padding: 0 0 0 30px;
+        padding: 0 0 0 rem(30px);
         cursor: pointer;
         &:before {
             content: '';
             position: absolute;
-            top: 2px;
-            left: 1px;
+            top: rem(2px);
+            left: rem(1px);
         //   @include circle (15px, white);
-            width: 15px;
-            height: 15px;
+            width: rem(15px);
+            height: rem(15px);
             background: white;
             transition: .2s;
           }
@@ -90,9 +96,9 @@
     &:before {
         content: '';
         position: absolute;
-        top: 2px;
-        left: 1px;
-      @include circle (15px, white);
+        top: rem(2px);
+        left: rem(1px);
+      @include circle (1rem(5px), white);
         background: white;
         transition: .2s;
       }
@@ -101,9 +107,9 @@
   .form__checkbox input:checked + .form__comment-title:before {
     content: "\2022";
     color: $orange;
-    font-size: 30px;
+    font-size: rem(30px);
     text-align: center;
-    line-height: 15px;
+    line-height: rem(15px);
   }
 
   .form__checkbox input:checked + .form__comment-title--checkbox:before {
@@ -111,7 +117,7 @@
   }
 
   .clean {
-      padding-left: 20px;
+      padding-left: rem(20px);
       color: white;
       border: none;
       background: transparent;

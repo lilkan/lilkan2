@@ -1,3 +1,18 @@
+
+
+html {
+    font-size: 16px;
+
+    @include tablets {
+        font-size: 15px;
+    }
+
+    @include phones {
+        font-size: 14px;
+    }
+}
+ 
+
 * {
     box-sizing: border-box;
 }
@@ -6,7 +21,6 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    font-size: 16px;
     font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
     line-height: 1.42;
     color: $dark;
@@ -18,27 +32,10 @@ body {
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-}
-
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-.visuallyhidden:not(:focus):not(:active) {
-    position: absolute;
-    width: 1px;
-    height: 1px; 
-    margin: -1px;
-    border: 0;  
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
 }
 
 p {
