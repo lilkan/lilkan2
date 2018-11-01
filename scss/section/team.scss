@@ -79,14 +79,17 @@
 .team-acco__text {
     color: white;
     height: rem(100px);
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     padding-left: rem(25px);
-    font-size: medium;
     @include tablets {
         padding-left: 0;
     }
+}
+
+.team-acco__text-content {
+    display: inline-flex;
 }
 
 .team-acco__item_active {

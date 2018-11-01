@@ -26,8 +26,11 @@
     display: flex;
     flex-grow: 1;
     flex-direction: row;
-    // flex-wrap: nowrap;
     align-items: top;
+    @include phones {
+        flex-direction: column; 
+        justify-content: space-around;
+    }
 }
 
 .best__feature {
@@ -35,10 +38,14 @@
     width: 100%;
     flex-direction: column;
     justify-content: top;
+    @include phones {
+        flex-direction: row;
+    }
 }
 
 .best__img {
     padding-bottom: rem(40px);
+
 }
 
 .best__caption {

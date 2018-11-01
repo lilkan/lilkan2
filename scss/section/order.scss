@@ -5,6 +5,9 @@
 .form {
     color: white;
     margin-top: rem(56px);
+    @include phones {
+        padding: 0 rem(20px);
+    }
 }
 
 
@@ -23,6 +26,11 @@
     }
     @include tablets {
         width: rem(470px);
+        margin-right: 0;
+    }
+    @include phones {
+        margin-right: 0;
+        width: rem(370px);
     }
 }
 
@@ -44,6 +52,11 @@
 .form__row {
     display: flex;
     margin-bottom: rem(20px);
+    @include phones {
+        ::nth-last-child {
+            display: none;
+        }
+    }
 }
 
 .form__block {
@@ -98,7 +111,7 @@
         position: absolute;
         top: rem(2px);
         left: rem(1px);
-      @include circle (1rem(5px), white);
+      @include circle (rem(15px), white);
         background: white;
         transition: .2s;
       }

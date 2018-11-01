@@ -34,6 +34,12 @@
     line-height: 1.42;
     top: rem(90px);
     left: rem(90px);
+
+    @include phones {
+        font-size: rem(50px);
+        top: rem(50px);
+        left: rem(50px);
+    }
 }
 
 
@@ -68,7 +74,7 @@
     position: absolute;
     font-family: gagalin;
     left: 9%;
-    top: 70%;
+    top: 95%;
     // right: 0;
     // bottom: 20%;
     transform: rotate(-90deg);
@@ -83,7 +89,7 @@
     display: none;
     width: 0rem;
     overflow: hidden;
-    background-color: rgba(47, 50, 52, 0.93);
+    background-color: rgba(47, 50, 52, 0.93); 
 }
 
 .menu-acco__content-active { 
