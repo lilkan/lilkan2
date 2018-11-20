@@ -30,8 +30,8 @@
                                 </nav>
                             </div>
                             <div class="header__order"><a class="order-link" href="" data-goto="6"> заказать </a></div> 
-                            <a class="hamburger-menu-link" href="">
-                                <div class="hamburger-menu-link__bars"></div>
+                            <a class="hamburger-menu-link" href="#">
+                                <div class="hamburger-menu-link__bars" id="mobile__view_btn"></div>
                             </a>
                     </header>
                     <div class="hero__content">
@@ -384,7 +384,31 @@
             </section>
         </div>  
         <ul class="fixed-menu"></ul>
+        <section class="mobile__view" id="mobile__view" style="display: none"> 
+            <ul class="mobile__view_list">
+                <li class="mobile__view_item">
+                    <a href="#">о нас</a>
+                </li>
+                <li class="mobile__view_item">
+                    <a href="#">бургеры</a>
+                </li>
+                <li class="mobile__view_item">
+                    <a href="#">команда</a>
+                </li>
+                <li class="mobile__view_item">
+                    <a href="#">меню</a>
+                </li>
+                <li class="mobile__view_item">
+                    <a href="#">отзывы</a>
+                </li>
+                <li class="mobile__view_item">
+                    <a href="#">контакты</a>
+                </li>
+            </ul>
+            <img src="img_first/close_white.png" alt="" class="close__button_mob" id="close__button_mob">
+        </section>
     </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
