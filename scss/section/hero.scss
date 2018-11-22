@@ -78,10 +78,6 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 15%;
-
-    @include tablets {
-        padding-bottom: 0;
-    }
 }
 
 .hero__burger-img {
