@@ -891,7 +891,11 @@ footer {
   -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
-  height: 100%; }
+  height: 100%;
+  color: white;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .menu-acco__item:hover .menu-acco__trigger-disc {
     color: #f8b43a; }
 
@@ -901,9 +905,10 @@ footer {
 
 .menu-acco__trigger-disc {
   position: absolute;
+  display: block;
   font-family: gagalin;
   left: 9%;
-  top: 95%;
+  top: 15rem;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
@@ -917,21 +922,26 @@ footer {
 
 .menu-acco__content {
   display: none;
+  color: white;
   width: 0rem;
   overflow: hidden;
   background-color: rgba(47, 50, 52, 0.93); }
 
-.menu-acco__content-active .menu-acco__content {
+.menu-acco__content-active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 25rem;
   font-family: ubuntu;
   font-size: 0.875rem;
   line-height: 1.375rem;
   color: white;
-  padding: 3.75rem 2.1875rem;
-  background-color: rgba(47, 50, 52, 0.93); }
+  width: 100%;
+  background: rgba(105, 105, 105, 0.8);
+  padding-left: 0.625rem;
+  height: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .mobile__view_block {
   display: none; }
@@ -997,5 +1007,144 @@ footer {
 
 .mobile__view_item:nth-of-type(6):after {
   display: none; }
+
+.burgers {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffcc33), color-stop(#eb8c38), to(#ffcc33));
+  background: -webkit-linear-gradient(bottom, #ffcc33, #eb8c38, #ffcc33);
+  background: -o-linear-gradient(bottom, #ffcc33, #eb8c38, #ffcc33);
+  background: linear-gradient(to top, #ffcc33, #eb8c38, #ffcc33);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.burger__container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%; }
+
+.burger__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.burger__view {
+  position: relative; }
+
+.burger__menu {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  left: 5.625rem;
+  top: 0;
+  width: 23.125rem;
+  border-radius: 4px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+.burger__menu-items {
+  padding-left: 1.25rem; }
+
+.burger__menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.125rem 1.375rem 1.125rem 0; }
+
+.menu__img {
+  margin-right: 1.5625rem; }
+
+.menu__name {
+  margin-right: 4.0625rem;
+  width: 4.375rem;
+  text-align: left;
+  font-weight: bold; }
+
+.burger__composition {
+  position: absolute;
+  top: -3.5rem;
+  left: 0; }
+
+.burger__composition:hover .burger__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.burger__kkal {
+  position: absolute;
+  bottom: -3rem;
+  left: 0.5rem; }
+
+.burger__weight {
+  position: absolute;
+  top: 1.4375rem;
+  left: 0.8125rem;
+  font-family: 'gagalin';
+  font-size: 1.25rem;
+  color: #FED586; }
+
+.burger__discription {
+  text-align: left;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 47%; }
+
+.burger__txt-add {
+  padding: 0;
+  color: white;
+  text-align: left;
+  line-height: 3.75rem; }
+
+.burger__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.burger__order {
+  margin-top: 1.5625rem; }
+
+.burger__price-numb {
+  display: block;
+  color: #e25028;
+  font-family: 'Gagalin';
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.42;
+  margin-right: 1.25rem; }
+  .burger__price-numb span {
+    font-size: 4.6875rem; }
 
 /*# sourceMappingURL=main.css.map */
