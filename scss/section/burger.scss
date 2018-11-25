@@ -63,6 +63,21 @@
     left: 0;
 }
 
+.burger__composition-img {
+    max-height: 75vh;
+    max-width: 75vh;
+
+    @include tablets {
+        height: 75px;
+        width: 75px;
+    }
+    @include phones {
+        height: 50px;
+        width: 50px;
+    }
+   
+}
+
 .burger__composition:hover .burger__menu {
     display: flex;
 }

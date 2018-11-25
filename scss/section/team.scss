@@ -32,6 +32,7 @@
 .team__acco {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .team-acco__item {
@@ -58,9 +59,6 @@
     }
 }
 
-.team-acco__pic {
-    
-}
 
 .team-acco__pick-img{
     width: rem(100px);
@@ -92,7 +90,7 @@
     display: inline-flex;
 }
 
-.team-acco__item_active {
+.team-acco__active {
     .team-acco__trigger {
         color: $yellow;
         &:before {

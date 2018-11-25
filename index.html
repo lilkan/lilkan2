@@ -20,16 +20,16 @@
                             <div class="header__menu">
                                 <nav class="nav">
                                     <ul class="nav__list">
-                                        <li class="nav__item"> <a href="" class="nav__link" data-goto="1">о нас</a></li>
-                                        <li class="nav__item"> <a href="" class="nav__link" data-goto="2">бургеры</a></li>
-                                        <li class="nav__item"> <a href="" class="nav__link" data-goto="3">команда</a></li>
-                                        <li class="nav__item"> <a href="" class="nav__link" data-goto="4">меню</a></li>
-                                        <li class="nav__item"> <a href="" class="nav__link" data-goto="5">отзывы</a></li>
-                                        <li class="nav__item"> <a href="" class="nav__link" data-goto="7">контакты</a></li>
+                                        <li class="nav__item"> <a href="#best" class="nav__link" data-goto="1">о нас</a></li>
+                                        <li class="nav__item"> <a href="#burgers" class="nav__link" data-goto="2">бургеры</a></li>
+                                        <li class="nav__item"> <a href="#team" class="nav__link" data-goto="3">команда</a></li>
+                                        <li class="nav__item"> <a href="#menu" class="nav__link" data-goto="4">меню</a></li>
+                                        <li class="nav__item"> <a href="#feedback" class="nav__link" data-goto="5">отзывы</a></li>
+                                        <li class="nav__item"> <a href="#map" class="nav__link" data-goto="7">контакты</a></li>
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="header__order"><a class="order-link" href="#" data-goto="6"> заказать </a></div> 
+                            <div class="header__order"><a class="order-link" href="#order" data-goto="6"> заказать </a></div> 
                             <a class="hamburger-menu-link" href="#">
                                 <div class="hamburger-menu-link__bars" id="mobile__view_btn"></div>
                             </a>
@@ -51,7 +51,7 @@
                     </button>
                 </div>    
             </section>
-            <section class="section best">
+            <section class="section best" id="best">
                 <div class="container best__container">
                     <h2 class="hero__titles-first hero__titles-first--best"> мы лучшие</h2>
                     <div class="best__content">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section burgers">
+            <section class="section burgers" id="burgers">
                 <div class="burger__arrow">
                     <img src="img_first/arrow-scroll_left.png" alt="Влево" class="arrow">
                 </div>
@@ -118,9 +118,6 @@
                                         </ul>
                                     </div>
                             </div>
-                            <div class="burger__composition_full">
-
-                            </div>
                             <div class="burger__kkal">
                                 <img src="img_first/kkal.png" alt="состав" class="burger__composition-img">
                                 <span class="burger__weight">1200</span>
@@ -144,7 +141,7 @@
                     <img src="img_first/arrow-scroll_right.png" alt="Вправо" class="arrow">
                 </div>
             </section>
-            <section class="section team">
+            <section class="section team" id="team">
                 <div class="team__container">
                     <div class="team__content">
                         <div class="hero__titles-first">команда</div>
@@ -210,7 +207,7 @@
                 </div>
 
             </section>
-            <section class="section menu">
+            <section class="section menu" id="menu" >
                 <div class="menu__container">
                     <div class="menu__content">
                         <span class="menu__titles">меню</span>
@@ -247,7 +244,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section feedback">
+            <section class="section feedback" id="feedback">
                 <div class="feedback__container">
                     <div class="feedback__content">
                         <div class="feedback__profile" style= "background-image: url('/img_first/Face/1face.jpg')">
@@ -350,7 +347,7 @@
                 </div>
 
             </section>
-            <section class="section order section_centered">
+            <section class="section order section_centered" id="order">
                 <div class="container">
                  <div class="hero__titles-first">закажите доставку</div>
                  <div class="form">
@@ -425,7 +422,7 @@
                  </div>
                 </div>
             </section>
-            <section class="section map">
+            <section class="section map" id="map">
                 <div class="container map__container">
                     
                 </div>
@@ -448,7 +445,7 @@
                                 <a href="https://twitter.com/conscientia_non"><img src="/img_first/icons/twitter.svg" alt="Twitter" class="footer__links-img"></a>
                             </li>
                         </ul>
-                    </div>
+                </div>
             </section>
         </div>  
         <ul class="fixed-menu"></ul>
@@ -476,7 +473,9 @@
             <img src="img_first/close_white.png" alt="" class="close__button_mob" id="close__button_mob">
         </section>
     </div>
+    <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
+    
 </body>
 
 </html>
