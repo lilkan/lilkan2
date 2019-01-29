@@ -1,3 +1,36 @@
+const display = $('.maincontent');
+const sections = $('.section');
+let scrol = false;
+console.log(sections.length)
+
+const perform = sectionEq => {    
+    if (scrol) return 
+        scrol = true
+        const position = (sectionEq * -100) + '%';
+        display.css({'transform' : `translate(0, ${position})`,})
+    sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
+    setTimeout(() => {scrol = false;}, 1300);
+}
+
+
+
+$('.wrapper').on('wheel', (e) => {
+    const deltaY = e.originalEvent.deltaY;
+    const active = sections.filter('.active');
+    const nexts = active.next();
+    const prevs = active.prev();
+    
+    if (deltaY > 0 && nexts.length) {
+        perform(nexts.index())
+    }
+
+    if (deltaY < 0 && prevs.length) {
+        perform(prevs.index())
+    }
+});
+
+
+
 let mobileViewOpen = document.getElementById('mobile__view_btn');
 let mobileView = document.getElementById('mobile__view');
 let mobileViewClose = document.getElementById('close__button_mob');
