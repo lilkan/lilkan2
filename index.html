@@ -25,16 +25,16 @@
                             <div class="header__menu">
                                 <nav class="nav">
                                     <ul class="nav__list">
-                                        <li class="nav__item"> <a href="#best" class="nav__link" data-goto="1">о нас</a></li>
-                                        <li class="nav__item"> <a href="#burgers" class="nav__link" data-goto="2">бургеры</a></li>
-                                        <li class="nav__item"> <a href="#team" class="nav__link" data-goto="3">команда</a></li>
-                                        <li class="nav__item"> <a href="#menu" class="nav__link" data-goto="4">меню</a></li>
-                                        <li class="nav__item"> <a href="#feedback" class="nav__link" data-goto="5">отзывы</a></li>
-                                        <li class="nav__item"> <a href="#map" class="nav__link" data-goto="7">контакты</a></li>
+                                        <li class="nav__item"> <a href="#best" class="nav__link" data-scroll-to="1">о нас</a></li>
+                                        <li class="nav__item"> <a href="#burgers" class="nav__link" data-scroll-to="2">бургеры</a></li>
+                                        <li class="nav__item"> <a href="#team" class="nav__link" data-scroll-to="3">команда</a></li>
+                                        <li class="nav__item"> <a href="#menu" class="nav__link" data-scroll-to="4">меню</a></li>
+                                        <li class="nav__item"> <a href="#feedback" class="nav__link" data-scroll-to="5">отзывы</a></li>
+                                        <li class="nav__item"> <a href="#map" class="nav__link" data-scroll-to="7">контакты</a></li>
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="header__order"><a class="order-link" href="#order" data-goto="6"> заказать </a></div> 
+                            <div class="header__order"><a class="order-link" href="#order" data-scroll-to="6"> заказать </a></div> 
                             <a class="hamburger-menu-link" href="#">
                                 <div class="hamburger-menu-link__bars" id="mobile__view_btn"></div>
                             </a>
@@ -52,9 +52,12 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="scrol_down">
-                    </button>
-                </div>    
+                </div>
+                <a class="down-arrow" href="#" data-scroll-to="1">
+                    <svg class="down-arrow__icon">
+                      <use xlink:href="img_first/icons/sprite.svg#arrow-scroll"></use>
+                    </svg>
+                  </a>
             </section>
             <section class="section best" id="best">
                 <div class="container best__container">
@@ -569,7 +572,32 @@
             </section>
         </div>  
     </div>
-    <ul class="fixed-menu"></ul>
+    <ul class="fixed-menu">
+        <li class="fixed-menu__item active">
+          <a class="fixed-menu__link" href="" data-scroll-to="0"></a>
+        </li>
+        <li class="fixed-menu__item">
+          <a class="fixed-menu__link" href="" data-scroll-to="1"></a>
+        </li>
+        <li class="fixed-menu__item">
+          <a class="fixed-menu__link" href="" data-scroll-to="2"></a>
+        </li>
+        <li class="fixed-menu__item">
+          <a class="fixed-menu__link" href="" data-scroll-to="3"></a>
+        </li>
+        <li class="fixed-menu__item">
+          <a class="fixed-menu__link" href="" data-scroll-to="4"></a>
+        </li>
+        <li class="fixed-menu__item">
+          <a class="fixed-menu__link" href="" data-scroll-to="5"></a>
+        </li>
+        <li class="fixed-menu__item">
+          <a class="fixed-menu__link" href="" data-scroll-to="6"></a>
+        </li>
+        <li class="fixed-menu__item">
+          <a class="fixed-menu__link" href="" data-scroll-to="7"></a>
+        </li>
+    </ul>
     <section class="mobile__view" id="mobile__view" style="display: none"> 
             <ul class="mobile__view_list">
                 <li class="mobile__view_item">

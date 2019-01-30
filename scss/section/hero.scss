@@ -153,3 +153,26 @@
 		bottom: 0;
 	}
 }
+
+
+.down-arrow {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    width: 3.75rem;
+    transform: translateX(-50%);
+    transition: .3s;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .down-arrow:hover .down-arrow__icon {
+      margin-top: -0.9375rem;
+      width: 2.8125rem;
+      height: 2.8125rem; }
+  
+  .down-arrow__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: .3s;
+    fill: #fff; }

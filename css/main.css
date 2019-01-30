@@ -308,6 +308,41 @@ footer {
 .hamburger-menu-link__bars:after {
   bottom: 0; }
 
+.down-arrow {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  width: 3.75rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  height: 3.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.down-arrow:hover .down-arrow__icon {
+  margin-top: -0.9375rem;
+  width: 2.8125rem;
+  height: 2.8125rem; }
+
+.down-arrow__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  fill: #fff; }
+
 .best {
   background-image: url("../img_first/Rectangle1.png");
   background-repeat: no-repeat;
@@ -1168,5 +1203,54 @@ footer {
 .burger__img {
   max-width: 100%;
   max-height: 100%; }
+
+.fixed-menu {
+  position: fixed;
+  top: 5.625rem;
+  right: 2.5rem; }
+  @media screen and (max-width: 768px) {
+    .fixed-menu {
+      display: none; } }
+
+.fixed-menu__link {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  position: relative; }
+  .fixed-menu__link:after, .fixed-menu__link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%; }
+  .fixed-menu__link:after {
+    width: 0.375rem;
+    height: 0.375rem;
+    background: #fff; }
+  .fixed-menu__link:before {
+    width: 0rem;
+    height: 0rem;
+    border-radius: 50%;
+    border: 0.0625rem solid #fff;
+    opacity: 0;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .fixed-menu__link:hover:before {
+    width: 0.875rem;
+    height: 0.875rem;
+    opacity: 1; }
+
+.fixed-menu__item.active .fixed-menu__link:before {
+  width: 0.875rem;
+  height: 0.875rem;
+  opacity: 1; }
+
+.fixed-menu__item {
+  margin-bottom: 0.3125rem; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,36 +1,66 @@
+// слайдер
 const display = $('.maincontent');
 const sections = $('.section');
 let scrol = false;
-console.log(sections.length)
 
-const perform = sectionEq => {    
+// установка active класса на крошки справа
+const switchFixedMenu = sectionEq => {
+    $('.fixed-menu__item').eq(sectionEq).addClass('active').siblings().removeClass('active'); 
+    }
+
+// прокрутка секцийй
+const perform = sectionEq => {
     if (scrol) return 
         scrol = true
         const position = (sectionEq * -100) + '%';
         display.css({'transform' : `translate(0, ${position})`,})
     sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
-    setTimeout(() => {scrol = false;}, 1300);
+    setTimeout(() => {scrol = false;
+    switchFixedMenu(sectionEq)}, 1300);
+    }
+// поиск активной секции
+const definedSections = sections => {
+    const active = sections.filter('.active');
+    return {
+        active: active,
+        nexts: active.next(),
+        prevs: active.prev(),
+    }
 }
 
-
-
+// прокрутка слайдера
 $('.wrapper').on('wheel', (e) => {
     const deltaY = e.originalEvent.deltaY;
-    const active = sections.filter('.active');
-    const nexts = active.next();
-    const prevs = active.prev();
+    const section = definedSections(sections);
     
-    if (deltaY > 0 && nexts.length) {
-        perform(nexts.index())
+    if (deltaY > 0 && section.nexts.length) {
+        perform(section.nexts.index())
     }
 
-    if (deltaY < 0 && prevs.length) {
-        perform(prevs.index())
+    if (deltaY < 0 && section.prevs.length) {
+        perform(section.prevs.index())
     }
 });
 
+// управление кнопками вверх и вниз
+$(document).on('keydown', e =>{
 
+    const section = definedSections(sections);
+    if (scrol) return
+    switch (e.keyCode) {
+        case 40: //вверх
+        if (!section.nexts.length) return;
+        perform(section.nexts.index());
+        break;
 
+        case 38: //вниз
+        if (!section.prevs.length) return;
+        perform(section.prevs.index());
+        break;
+    }
+})
+
+// мобильное меню на JS
 let mobileViewOpen = document.getElementById('mobile__view_btn');
 let mobileView = document.getElementById('mobile__view');
 let mobileViewClose = document.getElementById('close__button_mob');
@@ -43,7 +73,7 @@ mobileViewClose.addEventListener('click', function(){
     mobileView.style.display = "none";
 })
 
-
+// слайдеры и аккордеоны на jQuery
 $(document).ready(()=>{
     $('.team-acco__item').on('click', (e) => {
         e.preventDefault();
@@ -80,3 +110,9 @@ $(document).ready(()=>{
     });
 })
 
+$('[data-scroll-to]').on('click', e => {
+    e.preventDefault();
+    const $this = $(e.currentTarget);
+    const sectionIndex = parseInt($this.attr('data-scroll-to'));
+    perform(sectionIndex);
+});
