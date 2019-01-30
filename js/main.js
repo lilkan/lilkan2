@@ -3,6 +3,10 @@ const display = $('.maincontent');
 const sections = $('.section');
 let scrol = false;
 
+// инициализация мобилок
+const mobileDetect = new MobileDetect(window.navigator.userAgent)
+const isMobile = mobileDetect.mobile();
+
 // установка active класса на крошки справа
 const switchFixedMenu = sectionEq => {
     $('.fixed-menu__item').eq(sectionEq).addClass('active').siblings().removeClass('active'); 
@@ -28,18 +32,35 @@ const definedSections = sections => {
     }
 }
 
-// прокрутка слайдера
-$('.wrapper').on('wheel', (e) => {
-    const deltaY = e.originalEvent.deltaY;
+const scrollToSection = direction => {
     const section = definedSections(sections);
-    
-    if (deltaY > 0 && section.nexts.length) {
-        perform(section.nexts.index())
-    }
+    if (scrol) return;
+    if(direction === 'up' && section.nexts.length) {
+        perform(section.nexts.index())    } 
 
-    if (deltaY < 0 && section.prevs.length) {
-        perform(section.prevs.index())
-    }
+    if(direction === 'down' && section.prevs.length) {
+        perform(section.prevs.index())    } 
+}
+
+
+// прокрутка слайдера
+$('.wrapper').on({
+    wheel : e => {
+        const deltaY = e.originalEvent.deltaY;
+        const section = definedSections(sections);
+        
+        if (deltaY > 0 && section.nexts.length) {
+            perform(section.nexts.index())
+        }
+    
+        if (deltaY < 0 && section.prevs.length) {
+            perform(section.prevs.index())
+        }
+},
+
+touchmove: e => {
+    e.preventDefault()
+}
 });
 
 // управление кнопками вверх и вниз
@@ -58,7 +79,7 @@ $(document).on('keydown', e =>{
         perform(section.prevs.index());
         break;
     }
-})
+});
 
 // мобильное меню на JS
 let mobileViewOpen = document.getElementById('mobile__view_btn');
@@ -108,9 +129,19 @@ $(document).ready(()=>{
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
     });
-})
+});
 
-$('[data-scroll-to]').on('click', e => {
+
+// слайдер на мобилки
+if (isMobile) {
+    $(window).swipe({
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+        scrollToSection(direction);
+        }
+    })
+}
+// прокрутка через навигацию
+$('[data-scroll-to]').on('click touchstart', e => {
     e.preventDefault();
     const $this = $(e.currentTarget);
     const sectionIndex = parseInt($this.attr('data-scroll-to'));

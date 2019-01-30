@@ -75,6 +75,9 @@ p {
   position: relative;
   min-height: 650px;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      min-height: auto; } }
 
 .maincontent {
   height: 100vh;
@@ -87,6 +90,9 @@ p {
   -ms-transform: translateY();
   transform: translateY();
   will-change: transform; }
+  @media screen and (max-width: 768px) {
+    .maincontent {
+      min-height: auto; } }
 
 .container {
   width: 95%;

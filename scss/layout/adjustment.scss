@@ -4,6 +4,9 @@
     position: relative; 
     min-height: 650px;
     overflow: hidden;
+    @include tablets {
+        min-height: auto;
+    }
 }
 
 .maincontent {
@@ -13,6 +16,9 @@
     transition: .7s;
     transform: translateY();
     will-change: transform;
+    @include tablets {
+        min-height: auto;
+    }
 }
 
 .container {
