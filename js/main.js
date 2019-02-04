@@ -32,6 +32,7 @@ const definedSections = sections => {
     }
 }
 
+// скрол на мобилках
 const scrollToSection = direction => {
     const section = definedSections(sections);
     if (scrol) return;
@@ -85,6 +86,7 @@ $(document).on('keydown', e =>{
 let mobileViewOpen = document.getElementById('mobile__view_btn');
 let mobileView = document.getElementById('mobile__view');
 let mobileViewClose = document.getElementById('close__button_mob');
+let mobileViewCloseScroll = document.getElementById('mobile__view_item');
 
 mobileViewOpen.addEventListener('click', function() {
      mobileView.style.display = "flex";
@@ -92,7 +94,13 @@ mobileViewOpen.addEventListener('click', function() {
 
 mobileViewClose.addEventListener('click', function(){
     mobileView.style.display = "none";
-})
+});
+
+// mobileViewCloseScroll.addEventListener('click', function(){
+//     mobileView.style.display = "none";
+// });
+
+
 
 // слайдеры и аккордеоны на jQuery
 $(document).ready(()=>{
@@ -147,3 +155,20 @@ $('[data-scroll-to]').on('click touchstart', e => {
     const sectionIndex = parseInt($this.attr('data-scroll-to'));
     perform(sectionIndex);
 });
+
+
+ymaps.ready(init);
+function init(){ 
+    console.log('map')
+    // Создание карты.    
+    var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [55.76, 37.64],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 7
+    });
+}

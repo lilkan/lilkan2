@@ -523,15 +523,18 @@ footer {
   background-size: cover;
   position: relative; }
 
-@media screen and (max-width: 768px) {
-  .team__content {
-    text-align: center; } }
+.team__content {
+  position: relative; }
+  @media screen and (max-width: 768px) {
+    .team__content {
+      text-align: center; } }
 
 .team__container {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
+  height: 100%;
   width: 50%;
   background: rgba(47, 50, 52, 0.93);
   display: -webkit-box;
@@ -582,7 +585,9 @@ footer {
     border: 0.5625rem solid transparent;
     border-top-color: #f8b43a;
     border-bottom-width: 0;
-    padding-top: 0.3125rem; }
+    padding-top: 0.3125rem;
+    margin-top: 0.375rem;
+    margin-right: 0.4375rem; }
 
 .team-acco__pick-img {
   width: 6.25rem;
@@ -631,7 +636,16 @@ footer {
     transform: rotate(-180deg);
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
-    transition: 0.5s; }
+    transition: 0.5s;
+    margin-bottom: 0.1875rem; }
+
+.fixed {
+  position: absolute;
+  top: 0; }
+  @media screen and (max-width: 768px) {
+    .fixed {
+      left: 50%;
+      margin-left: -25%; } }
 
 .order {
   background-image: url("/img_first/order.jpg");
@@ -775,10 +789,6 @@ footer {
   background: transparent; }
 
 .map {
-  background-image: url("/img_first/map-marker.jpg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
   width: 100%;
   color: white;
   position: relative; }

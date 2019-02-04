@@ -267,11 +267,11 @@
             </section>
             <section class="section team" id="team">
                 <div class="team__container">
-                    <div class="team__content">
-                        <div class="hero__titles-first">команда</div>
+                    <div class="hero__titles-first fixed">команда</div>
+                    <div class="team__content">                
                         <ul class="team-acco">
                             <li class="team-acco__item">
-                                <a href="#" class="team-acco__trigger">Дэниэл Редклиф</a>
+                                <span class="team-acco__trigger">Дэниэл Редклиф</span>
                                 <div class="team-acco__content">
                                     <div class="team-acco__pic">
                                         <img src="/img_first/aphex.jpg" alt="" class="team-acco__pick-img">
@@ -329,7 +329,6 @@
                         </ul>
                     </div>
                 </div>
-
             </section>
             <section class="section menu" id="menu" >
                 <div class="menu__container">
@@ -474,41 +473,41 @@
                 <div class="container">
                  <div class="hero__titles-first">закажите доставку</div>
                  <div class="form">
-                     <form action="" class="form__elem">
+                     <form action="server.php" method="post" id="order-form" class="form__elem">
                         <div class="form__elem-block"> 
                          <div class="form__content">
                              <div class="form__row">
                                  <label class="form__block">
                                      <div class="form__block-title">Имя</div>
-                                     <input type="text" class="form__input">
+                                     <input type="text" class="form__input" name="name">
                                  </label>
                                  <label class="form__block">
                                      <div class="form__block-title">Телефон</div>
-                                     <input type="text" class="form__input">
+                                     <input type="text" class="form__input" name="phone">
                                  </label>
                              </div>
                              <div class="form__row">
                                  <label class="form__block">
                                      <div class="form__block-title">Улица</div>
-                                     <input type="text" class="form__input">
+                                     <input type="text" class="form__input" name="st">
                                  </label>
                              </div>
                              <div class="form__row">
                                  <label class="form__block">
                                      <div class="form__block-title">Дом</div>
-                                     <input type="text" class="form__input">
+                                     <input type="text" class="form__input" name="home">
                                  </label>
                                  <label class="form__block">
                                      <div class="form__block-title">Корпус</div>
-                                     <input type="text" class="form__input">
+                                     <input type="text" class="form__input" name="corpus">
                                  </label>
                                  <label class="form__block">
                                      <div class="form__block-title">Квартира</div>
-                                     <input type="text" class="form__input">
+                                     <input type="text" class="form__input" name="flatnumb">
                                  </label>
                                  <label class="form__block">
                                      <div class="form__block-title">Этаж</div>
-                                     <input type="text" class="form__input">
+                                     <input type="text" class="form__input" name="flor">
                                  </label>
                              </div>
                          </div>
@@ -516,27 +515,27 @@
                             <div class="form__row"> 
                              <label class="form__block">
                                  <div class="form__comment">Комментарий</div>
-                                 <input type="text" class="form__input-comment">
+                                 <textarea name="message" class="form__input-comment"></textarea>
                              </label>
                             </div> 
                             <div class="form__row">
                                 <label class="form__checkbox">
-                                    <input type="radio" name ="check" class="form__checkbox-btn">
+                                    <input type="radio" name ="check" class="form__checkbox-btn" name="chash" value="chash">
                                     <div class="form__comment-title">Оплата наличными</div>
                                 </label>
                                 <label class="form__checkbox">
-                                        <input type="radio" name ="check"class="form__checkbox-btn">
+                                        <input type="radio" name ="check" class="form__checkbox-btn" name="card" value="card">
                                         <div class="form__comment-title">Оплата по карте</div>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__checkbox">
-                                    <input type="checkbox" class="form__checkbox-btn">
+                                    <input type="checkbox" class="form__checkbox-btn" name="dontcall" value="1">
                                     <div class="form__comment-title--checkbox">Не перезванивать</div>
                                 </label>
                             </div>
                             <div class="form__row">
-                                <div class="header__order"><a class="order-link" href="" data-goto="6"> заказать </a></div> 
+                                <div class="header__order"><button type="submit" class="order-link"> заказать </button></div> 
                                 <button class="clean">Очистить</button>
                             </div>
                          </div>
@@ -546,7 +545,7 @@
                 </div>
             </section>
             <section class="section map" id="map">
-                <div class="container map__container">
+                <div class="container map__container" id="map">
                     
                 </div>
                 <div class="footer">
@@ -625,6 +624,7 @@
     <script src="slick/slick.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.3/mobile-detect.min.js"></script>
     <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<0a6fc03f-c9a9-4a51-964b-050190236aff>&lang=ru_RU" type="text/javascript"></script>
     <script src="js/main.js"></script>
     
     

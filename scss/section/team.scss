@@ -4,6 +4,7 @@
 }
 
 .team__content {
+    position: relative;
     @include tablets {
         text-align: center;
     }
@@ -14,6 +15,7 @@
     top: 0;
     bottom: 0;
     right: 0;
+    height: 100%;
     width: 50%;
     background: rgba(#2f3234, .93);
     display: flex;
@@ -58,6 +60,8 @@
         border-top-color: $yellow;
         border-bottom-width: 0;
         padding-top: rem(5px);
+        margin-top: rem(6px);
+        margin-right: rem(7px);
     }
 }
 
@@ -99,13 +103,20 @@
         &:before {
             transform: rotate(-180deg);
             transition: 0.5s;
+            margin-bottom: rem(3px);
         }
     }
     .team-acco__content {
         @include tablets {
-
-            // justify-content: center;
-            // flex-direction: column;
         }
+    }
+}
+
+.fixed {
+    position: absolute;
+    top: 0;
+    @include tablets {
+        left: 50%;
+        margin-left: -25%;
     }
 }
