@@ -21,6 +21,18 @@ const perform = sectionEq => {
     sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
     setTimeout(() => {scrol = false;
     switchFixedMenu(sectionEq)}, 1300);
+    if (sectionEq == 7) {
+        $('.fixed-menu__link').css({
+            borderRadius: 50 + '%',
+            background: 'black'
+        })
+    }
+    else {
+        $('.fixed-menu__link').css({
+            borderRadius: '',
+            background: ''
+        })
+    }
     }
 // поиск активной секции
 const definedSections = sections => {
@@ -157,18 +169,50 @@ $('[data-scroll-to]').on('click touchstart', e => {
 });
 
 
+// карта ymaps
+
+var points = [
+    {
+        latitude: 59.93638914,
+        longitude: 30.30221121,
+        hintContent: 'это медный всадник',
+        balloonContent: 'Открыт 7 августа 1782 году',
+
+    },
+    {
+        latitude: 59.93982950,
+        longitude: 30.31459340,
+        hintContent: 'это Эрмитаж',
+        balloonContent: 'Основан в 1764 году',
+    },
+    {
+        latitude: 59.94416315,
+        longitude: 30.30705587,
+        hintContent: 'это стрелка Васильевского Острова',
+        balloonContent: 'Начали строить в 1805 году',
+    }
+];
+
 ymaps.ready(init);
 function init(){ 
-    console.log('map')
-    // Создание карты.    
-    var myMap = new ymaps.Map("map", {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
-        center: [55.76, 37.64],
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 7
+    var myMap = new ymaps.Map("maps", {
+        center: [59.94053697, 30.30830772],
+        zoom: 14,
+        controls: ['zoomControl'],
+        behaviors: ['drag', 'multiTouch']
     });
+
+    points.forEach(function(obj) {
+        var places = new ymaps.Placemark([obj.latitude, obj.longitude], {
+            hintContent: obj.hintContent,
+            balloonContent: obj.balloonContent
+        },
+        {
+            iconLayout: 'default#image',
+            iconImageHref: 'img_first/icons/map-marker.svg',
+            iconImageSize: [46, 67],
+            iconImageOffset: [-23, -57]
+        });
+            myMap.geoObjects.add(places);
+        });
 }
