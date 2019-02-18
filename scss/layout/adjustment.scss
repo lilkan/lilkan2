@@ -16,7 +16,7 @@
     transition: .7s;
     transform: translateY();
     will-change: transform;
-    @include tablets {
+     @include tablets {
         min-height: auto;
     }
 }
