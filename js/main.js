@@ -3,6 +3,14 @@ const display = $('.maincontent');
 const sections = $('.section');
 let scrol = false;
 
+//отчистить форму
+const cleanBtn = document.getElementById('clean_btn');
+cleanBtn.addEventListener('click', e => 
+    {
+        e.preventDefault();
+        document.myForm.reset();
+    })
+
 // инициализация мобилок
 const mobileDetect = new MobileDetect(window.navigator.userAgent)
 const isMobile = mobileDetect.mobile();
@@ -108,12 +116,6 @@ mobileViewClose.addEventListener('click', function(){
     mobileView.style.display = "none";
 });
 
-// mobileViewCloseScroll.addEventListener('click', function(){
-//     mobileView.style.display = "none";
-// });
-
-
-
 // слайдеры и аккордеоны на jQuery
 $(document).ready(()=>{
     $('.team-acco__item').on('click', (e) => {
@@ -138,7 +140,6 @@ $(document).ready(()=>{
                 height : 0
             })
         }
-        
     })
     $('.menu-acco__item').on('click', (e) => {
         let push = $(e.currentTarget)
@@ -150,8 +151,6 @@ $(document).ready(()=>{
         nextArrow: $('.next'),
     });
 });
-
-
 // слайдер на мобилки
 if (isMobile) {
     $(window).swipe({
@@ -167,10 +166,7 @@ $('[data-scroll-to]').on('click touchstart', e => {
     const sectionIndex = parseInt($this.attr('data-scroll-to'));
     perform(sectionIndex);
 });
-
-
 // карта ymaps
-
 var points = [
     {
         latitude: 59.93638914,

@@ -143,7 +143,7 @@ footer {
   widows: 100%; }
 
 .hero {
-  background-image: url("/img_first/Rectangle.png");
+  background-image: url("../img_first/Rectangle.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -517,7 +517,7 @@ footer {
   font-family: 'Gagalin'; }
 
 .team {
-  background-image: url("/img_first/teambg.png");
+  background-image: url("../img_first/teambg.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -648,7 +648,7 @@ footer {
       margin-left: -25%; } }
 
 .order {
-  background-image: url("/img_first/order.jpg");
+  background-image: url("../img_first/order.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover; }
@@ -777,7 +777,7 @@ footer {
   line-height: 0.9375rem; }
 
 .form__checkbox input:checked + .form__comment-title--checkbox:before {
-  background-image: url("/img_first/check.png");
+  background-image: url("../img_first/check.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover; }
@@ -812,7 +812,7 @@ footer {
   align-items: flex-end; }
 
 .footer {
-  background-image: url("/img_first/footerbg.jpg");
+  background-image: url("../img_first/footerbg.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -867,10 +867,10 @@ footer {
   color: #e25028;
   font-weight: 600; }
   .footer__contacts-phone:before {
-    content: url("/img_first/phone.png"); }
+    content: url("../img_first/phone.png"); }
 
 .menu {
-  background-image: url("/img_first/menu1.jpg");
+  background-image: url("../img_first/menu1.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
