@@ -17,13 +17,19 @@
   },
   "homepage": "https://github.com/lilkan/lilkan1.github.io#readme",
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-postcss": "^8.0.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-watch": "^5.0.1",
-    "node-sass": "^4.11.0"
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-webpack": "^1.5.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-stream": "^5.2.1"
   }
 }
